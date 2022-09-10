@@ -1,0 +1,12 @@
+.main {
+    width: 340 px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto 100px !important;
+}
+
+* {
+    box-sizing: border-box;
+}
