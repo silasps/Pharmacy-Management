@@ -1,10 +1,18 @@
+import { BrowserRouter } from 'react-router-dom';
 import './App.css';
-import Login from "./pages/login/Login"
+import { LoginProvider } from './components/contexts/useLogin';
+import Rotas from './components/routes/Routes';
+import MainHeader from './pages/Header/Header';
+import Footer from './pages/Footer/Footer'
 
 export default function App() {
   return (
-    <div className="App">
-      <Login />
-    </div>
+    <LoginProvider>
+      <BrowserRouter>
+        <MainHeader />
+        <Rotas />
+        <Footer />
+      </BrowserRouter>
+    </LoginProvider>
   );
 }
