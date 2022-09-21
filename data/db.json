@@ -107,15 +107,215 @@
       "latitude": "33.6874388",
       "longitude": "-80.4363743",
       "id": "BMJO6Ck"
+    },
+    {
+      "razaoSocial": "CLAMED Joinville",
+      "cnpj": "3798077000147",
+      "nomeFantasia": "CLAMED Joinvill",
+      "email": "regulatorio@clamed.com.br",
+      "telefone": "",
+      "celular": "47 3461-9805",
+      "cep": "30690-790",
+      "logradouro": "Rua Hamilton",
+      "numero": "638",
+      "bairro": "Lindéia (Barreiro)",
+      "cidade": "Belo Horizonte",
+      "estado": "MG",
+      "complemento": "",
+      "latitude": "-25.3138605",
+      "longitude": "-49.3027466",
+      "id": "rH_pMaP"
+    },
+    {
+      "razaoSocial": "CLAMED Joinville",
+      "cnpj": "3798077000147",
+      "nomeFantasia": "CLAMED Joinvill",
+      "email": "regulatorio@clamed.com.br",
+      "telefone": "",
+      "celular": "47 3461-9805",
+      "cep": "89201-400",
+      "logradouro": "Rua Nove de Março",
+      "numero": "638",
+      "bairro": "Centro",
+      "cidade": "Joinville",
+      "estado": "SC",
+      "complemento": "",
+      "latitude": "-26.3014122",
+      "longitude": "-48.8492354",
+      "id": "3D0-ww4"
     }
   ],
   "medicines": [
     {
-      "cidade": "Joinville",
-      "estado": "SC",
-      "complemento": "",
-      "latitude": "-26.301449",
-      "longitude": "-48.847355"
+      "id": "123",
+      "nomeMedicamento": "Aspirina",
+      "nomeLab": "Creator Laboratories",
+      "doseMedicamento": "500mg",
+      "descMedicamento": "Aspirina - ácido acetilsalicílico 500mg² Aspirina é o medicamento da Bayer que tem ação analgésica, antitérmica e anti-inflamatória e é indicado há mais de 100 anos para o alívio da dor. Aspirina é indicada para dores de cabeça, de dente, de garganta, menstrual, muscular, nas articulações, nas costas, artrite e o alívio da dor e da febre nos resfriados ou gripes.",
+      "precoUnitario": "10,00",
+      "tipoMedicamento": "Medicamento comum"
+    },
+    {
+      "nomeMedicamento": "PARACETAMOL",
+      "nomeLab": "Creator Laboratories",
+      "doseMedicamento": "500mg",
+      "descMedicamento": "Este medicamento é indicado em adultos para a redução da febre e para o alívio temporário de dores leves a moderadas, tais como: dores associadas a resfriados comuns, dor de cabeça, dor no corpo, dor de dente, dor nas costas, dores musculares, dores leves associadas a artrites e cólicas menstruais.",
+      "precoUnitario": "15,00",
+      "tipoMedicamento": "Medicamento Comum",
+      "id": "R6Ektby"
+    },
+    {
+      "nomeMedicamento": "Flancox",
+      "nomeLab": "Hermes Pardini",
+      "doseMedicamento": "500mg",
+      "descMedicamento": "Este medicamento é destinado ao tratamento de espasmos (contrações involuntárias) musculares associadas com condições musculoesqueléticas agudas e dolorosas, como as dores lombares, torcicolos, periartrite escapuloumeral (acomete o ombro), cervicobraquialgias (dores na região do pescoço que irradiam para os braços) e no tratamento da fibromialgia. Além disso, é indicado como coadjuvante de outras medidas para o alívio dos sintomas, tais como fisioterapia e repouso.",
+      "precoUnitario": "38,59",
+      "tipoMedicamento": "Medicamento Comum",
+      "id": "R6EktbW"
+    },
+    {
+      "nomeMedicamento": "Dipirona",
+      "nomeLab": "Creator Laboratories",
+      "doseMedicamento": "500mg",
+      "descMedicamento": "Aspirina - ácido acetilsalicílico 500mg² Aspirina é o medicamento da Bayer que tem ação analgésica, antitérmica e anti-inflamatória e é indicado há mais de 100 anos para o alívio da dor. Aspirina é indicada para dores de cabeça, de dente, de garganta, menstrual, muscular, nas articulações, nas costas, artrite e o alívio da dor e da febre nos resfriados ou gripes.",
+      "precoUnitario": "10,00",
+      "tipoMedicamento": "Medicamento Comum",
+      "id": "HMYgM9T"
+    },
+    {
+      "nomeMedicamento": "Minoxidil",
+      "nomeLab": "Creator Laboratories",
+      "doseMedicamento": "100ml",
+      "descMedicamento": "Aspirina - ácido acetilsalicílico 500mg² Aspirina é o medicamento da Bayer que tem ação analgésica, antitérmica e anti-inflamatória e é indicado há mais de 100 anos para o alívio da dor. Aspirina é indicada para dores de cabeça, de dente, de garganta, menstrual, muscular, nas articulações, nas costas, artrite e o alívio da dor e da febre nos resfriados ou gripes.",
+      "precoUnitario": "10,00",
+      "tipoMedicamento": "Medicamento Controlado",
+      "id": "J3iAq38"
+    },
+    {
+      "nomeMedicamento": "Viagra",
+      "nomeLab": "Creator Laboratories",
+      "doseMedicamento": "100mg",
+      "descMedicamento": "Aspirina - ácido acetilsalicílico 500mg² Aspirina é o medicamento da Bayer que tem ação analgésica, antitérmica e anti-inflamatória e é indicado há mais de 100 anos para o alívio da dor. Aspirina é indicada para dores de cabeça, de dente, de garganta, menstrual, muscular, nas articulações, nas costas, artrite e o alívio da dor e da febre nos resfriados ou gripes.",
+      "precoUnitario": "100,00",
+      "tipoMedicamento": "Medicamento Controlado",
+      "id": "OJVjA-V"
+    },
+    {
+      "nomeMedicamento": "Dorflex",
+      "nomeLab": "Creator Laboratories",
+      "doseMedicamento": "500mg",
+      "descMedicamento": "Aspirina - ácido acetilsalicílico 500mg² Aspirina é o medicamento da Bayer que tem ação analgésica, antitérmica e anti-inflamatória e é indicado há mais de 100 anos para o alívio da dor. Aspirina é indicada para dores de cabeça, de dente, de garganta, menstrual, muscular, nas articulações, nas costas, artrite e o alívio da dor e da febre nos resfriados ou gripes.",
+      "precoUnitario": "52,90",
+      "tipoMedicamento": "Medicamento Comum",
+      "id": "HLnzgty"
+    },
+    {
+      "nomeMedicamento": "Aspirina",
+      "nomeLab": "Creator Laboratories",
+      "doseMedicamento": "500mg",
+      "descMedicamento": "Aspirina - ácido acetilsalicílico 500mg² Aspirina é o medicamento da Bayer que tem ação analgésica, antitérmica e anti-inflamatória e é indicado há mais de 100 anos para o alívio da dor. Aspirina é indicada para dores de cabeça, de dente, de garganta, menstrual, muscular, nas articulações, nas costas, artrite e o alívio da dor e da febre nos resfriados ou gripes.",
+      "precoUnitario": "10,00",
+      "tipoMedicamento": "Medicamento Controlado",
+      "id": "0Kfl5q5"
+    },
+    {
+      "nomeMedicamento": "Aspirina",
+      "nomeLab": "Creator Laboratories",
+      "doseMedicamento": "500mg",
+      "descMedicamento": "Aspirina - ácido acetilsalicílico 500mg² Aspirina é o medicamento da Bayer que tem ação analgésica, antitérmica e anti-inflamatória e é indicado há mais de 100 anos para o alívio da dor. Aspirina é indicada para dores de cabeça, de dente, de garganta, menstrual, muscular, nas articulações, nas costas, artrite e o alívio da dor e da febre nos resfriados ou gripes.",
+      "precoUnitario": "10,00",
+      "tipoMedicamento": "Medicamento Controlado",
+      "id": "LVyqUH3"
+    },
+    {
+      "nomeMedicamento": "Aspirina",
+      "nomeLab": "Creator Laboratories",
+      "doseMedicamento": "500mg",
+      "descMedicamento": "Aspirina - ácido acetilsalicílico 500mg² Aspirina é o medicamento da Bayer que tem ação analgésica, antitérmica e anti-inflamatória e é indicado há mais de 100 anos para o alívio da dor. Aspirina é indicada para dores de cabeça, de dente, de garganta, menstrual, muscular, nas articulações, nas costas, artrite e o alívio da dor e da febre nos resfriados ou gripes.",
+      "precoUnitario": "10,00",
+      "tipoMedicamento": "Medicamento Comum",
+      "id": "sM4KEvv"
+    },
+    {
+      "nomeMedicamento": "Aspirina",
+      "nomeLab": "Creator Laboratories",
+      "doseMedicamento": "500mg",
+      "descMedicamento": "Aspirina - ácido acetilsalicílico 500mg² Aspirina é o medicamento da Bayer que tem ação analgésica, antitérmica e anti-inflamatória e é indicado há mais de 100 anos para o alívio da dor. Aspirina é indicada para dores de cabeça, de dente, de garganta, menstrual, muscular, nas articulações, nas costas, artrite e o alívio da dor e da febre nos resfriados ou gripes.",
+      "precoUnitario": "10,00",
+      "tipoMedicamento": "Medicamento Comum",
+      "id": "Tyj2sfO"
+    },
+    {
+      "nomeMedicamento": "Aspirina",
+      "nomeLab": "Creator Laboratories",
+      "doseMedicamento": "500mg",
+      "descMedicamento": "Aspirina - ácido acetilsalicílico 500mg² Aspirina é o medicamento da Bayer que tem ação analgésica, antitérmica e anti-inflamatória e é indicado há mais de 100 anos para o alívio da dor. Aspirina é indicada para dores de cabeça, de dente, de garganta, menstrual, muscular, nas articulações, nas costas, artrite e o alívio da dor e da febre nos resfriados ou gripes.",
+      "precoUnitario": "10,00",
+      "tipoMedicamento": "Medicamento Comum",
+      "id": "iVnb3-3"
+    },
+    {
+      "nomeMedicamento": "Aspirina",
+      "nomeLab": "Creator Laboratories",
+      "doseMedicamento": "500mg",
+      "descMedicamento": "Aspirina - ácido acetilsalicílico 500mg² Aspirina é o medicamento da Bayer que tem ação analgésica, antitérmica e anti-inflamatória e é indicado há mais de 100 anos para o alívio da dor. Aspirina é indicada para dores de cabeça, de dente, de garganta, menstrual, muscular, nas articulações, nas costas, artrite e o alívio da dor e da febre nos resfriados ou gripes.",
+      "precoUnitario": "10,00",
+      "tipoMedicamento": "Medicamento Controlado",
+      "id": "Br-XX6O"
+    },
+    {
+      "nomeMedicamento": "Aspirina",
+      "nomeLab": "Creator Laboratories",
+      "doseMedicamento": "500mg",
+      "descMedicamento": "Aspirina - ácido acetilsalicílico 500mg² Aspirina é o medicamento da Bayer que tem ação analgésica, antitérmica e anti-inflamatória e é indicado há mais de 100 anos para o alívio da dor. Aspirina é indicada para dores de cabeça, de dente, de garganta, menstrual, muscular, nas articulações, nas costas, artrite e o alívio da dor e da febre nos resfriados ou gripes.",
+      "precoUnitario": "10,00",
+      "tipoMedicamento": "Medicamento comum",
+      "id": "Av_CtVY"
+    },
+    {
+      "nomeMedicamento": "Aspirina",
+      "nomeLab": "Creator Laboratories",
+      "doseMedicamento": "500mg",
+      "descMedicamento": "Aspirina - ácido acetilsalicílico 500mg² Aspirina é o medicamento da Bayer que tem ação analgésica, antitérmica e anti-inflamatória e é indicado há mais de 100 anos para o alívio da dor. Aspirina é indicada para dores de cabeça, de dente, de garganta, menstrual, muscular, nas articulações, nas costas, artrite e o alívio da dor e da febre nos resfriados ou gripes.",
+      "precoUnitario": "10,00",
+      "tipoMedicamento": "Medicamento comum",
+      "id": "RrsU6nV"
+    },
+    {
+      "nomeMedicamento": "Aspirina",
+      "nomeLab": "Creator Laboratories",
+      "doseMedicamento": "500mg",
+      "descMedicamento": "Aspirina - ácido acetilsalicílico 500mg² Aspirina é o medicamento da Bayer que tem ação analgésica, antitérmica e anti-inflamatória e é indicado há mais de 100 anos para o alívio da dor. Aspirina é indicada para dores de cabeça, de dente, de garganta, menstrual, muscular, nas articulações, nas costas, artrite e o alívio da dor e da febre nos resfriados ou gripes.",
+      "precoUnitario": "10,00",
+      "tipoMedicamento": "Medicamento Controlado",
+      "id": "N36eVwp"
+    },
+    {
+      "nomeMedicamento": "Aspirina",
+      "nomeLab": "Creator Laboratories",
+      "doseMedicamento": "500mg",
+      "descMedicamento": "Aspirina - ácido acetilsalicílico 500mg² Aspirina é o medicamento da Bayer que tem ação analgésica, antitérmica e anti-inflamatória e é indicado há mais de 100 anos para o alívio da dor. Aspirina é indicada para dores de cabeça, de dente, de garganta, menstrual, muscular, nas articulações, nas costas, artrite e o alívio da dor e da febre nos resfriados ou gripes.",
+      "precoUnitario": "10,00",
+      "tipoMedicamento": "Medicamento comum",
+      "id": "BmDgtzW"
+    },
+    {
+      "nomeMedicamento": "Aspirina",
+      "nomeLab": "Creator Laboratories",
+      "doseMedicamento": "500mg",
+      "descMedicamento": "Aspirina - ácido acetilsalicílico 500mg² Aspirina é o medicamento da Bayer que tem ação analgésica, antitérmica e anti-inflamatória e é indicado há mais de 100 anos para o alívio da dor. Aspirina é indicada para dores de cabeça, de dente, de garganta, menstrual, muscular, nas articulações, nas costas, artrite e o alívio da dor e da febre nos resfriados ou gripes.",
+      "precoUnitario": "10,00",
+      "tipoMedicamento": "Medicamento Comum",
+      "id": "iXluPYy"
+    },
+    {
+      "nomeMedicamento": "Aspirina",
+      "nomeLab": "Creator Laboratories",
+      "doseMedicamento": "500mg",
+      "descMedicamento": "Aspirina - ácido acetilsalicílico 500mg² Aspirina é o medicamento da Bayer que tem ação analgésica, antitérmica e anti-inflamatória e é indicado há mais de 100 anos para o alívio da dor. Aspirina é indicada para dores de cabeça, de dente, de garganta, menstrual, muscular, nas articulações, nas costas, artrite e o alívio da dor e da febre nos resfriados ou gripes.",
+      "precoUnitario": "10,00",
+      "tipoMedicamento": "Medicamento Controlado",
+      "id": "L7qteet"
     }
   ]
 }

@@ -1,12 +1,11 @@
-import { Button } from "bootstrap";
 import { useState, useEffect } from "react";
-import PharmForm from "../../components/ItemsForm/PharmForm";
+import PharmForm from "./PharmForm";
 
 export default function RegisterPharm() {
   const [pharm, setPharm] = useState({
     razaoSocial: "CLAMED Joinville",
     cnpj: "3798077000147",
-    nomeFantasia: "CLAMED Joinville",
+    nomeFantasia: "CLAMED Joinvill",
     email: "regulatorio@clamed.com.br",
     telefone: "",
     celular: "47 3461-9805",
@@ -43,6 +42,7 @@ export default function RegisterPharm() {
     fetch(`https://nominatim.openstreetmap.org/search?q=${rua}+${estado}&format=json`)
     .then((response) => response.json())
     .then(data => {
+      console.log(data);
       const {lat, lon} = data[0]
       setPharm(prev => ({
         ...prev,
@@ -74,7 +74,7 @@ export default function RegisterPharm() {
     <div
       className="form-container"
       style={{
-        minWidth: '90vh',
+        minWidth: '40vh',
         border: "solid #31955f 1px",
         borderRadius: "15px",
         margin: "40px 10px 40px 10px",

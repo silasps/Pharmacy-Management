@@ -1,9 +1,9 @@
 import { Route, Routes, Navigate } from "react-router-dom";
 import Login from "../../pages/login/Login";
 import Map from "../../pages/Map/Map";
-import RegisterMedicine from "../../pages/medicinesMngmt/RegisterMedicine";
-import MedicineList from "../../pages/medicinesMngmt/MedicineList";
-import RegisterPharm from "../../pages/pharmMngmt/RegisterPharm";
+import RegisterMedicine from "../../pages/MedicinePhorm/RegisterMedicine";
+import MedicineList from "../../pages/MedicineList/MedicineList";
+import RegisterPharm from "../../pages/RegisterPharm/RegisterPharm";
 import Home from "../../pages/Home"
 import { PrivateRoute } from "./PrivateRoute";
 import NotFound from "../../pages/NotFound";

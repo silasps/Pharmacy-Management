@@ -17,50 +17,55 @@ export default function Map() {
     <div
       style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
     >
-      <h2>Localização Farmácias CLAMED</h2>
-      <MapContainer
-        center={[-26.301449, -48.8492354]}
-        zoom={10}
-        scrollWheelZoom={true}
-        style={{ height: "800px", width: "1000px" }}
-      >
-        <TileLayer
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        />
+      <h2 style={{ textAlign: "center", marginTop: "15px" }}>
+        Localização Farmácias CLAMED
+      </h2>
 
-        {pharmLocation.map((pharmLocation) => (
-          <Marker
-            key={pharmLocation.id}
-            position={[pharmLocation.latitude, pharmLocation.longitude]}
-          >
-            <Popup>
-              <div style={{ textAlign: "center" }}>
-                <h3 style={{ margin: "10px", textAlign: "center" }}>
-                  {pharmLocation.nomeFantasia}
-                </h3>
-                <p>
-                  {pharmLocation.logradouro} {pharmLocation.numero},{" "}
-                  {pharmLocation.bairro} <br />
-                  CEP {pharmLocation.cep} - {pharmLocation.cidade} -{" "}
-                  {pharmLocation.estado}
-                </p>
+      <div className="img-fluid">
+        <MapContainer
+          center={[-26.301449, -48.8492354]}
+          zoom={10}
+          scrollWheelZoom={true}
+          style={{ height: "800px", width: "1000px" }}
+        >
+          <TileLayer
+            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          />
 
-                <p>
-                  <strong>Fale conosco: </strong>
-                  {pharmLocation.celular}
-                </p>
-                <SocialIcon
-                  url={`https://web.whatsapp.com/send?phone=55${pharmLocation.celular
-                    .replace(/(?!\w|\s)./g, "") //remove special characters
-                    .replace(/\s+/g, "")}`} //remove blank spaces
-                  target="_blank"
-                />
-              </div>
-            </Popup>
-          </Marker>
-        ))}
-      </MapContainer>
+          {pharmLocation.map((pharmLocation) => (
+            <Marker
+              key={pharmLocation.id}
+              position={[pharmLocation.latitude, pharmLocation.longitude]}
+            >
+              <Popup>
+                <div style={{ textAlign: "center" }}>
+                  <h3 style={{ margin: "10px", textAlign: "center" }}>
+                    {pharmLocation.nomeFantasia}
+                  </h3>
+                  <p>
+                    {pharmLocation.logradouro} {pharmLocation.numero},{" "}
+                    {pharmLocation.bairro} <br />
+                    CEP {pharmLocation.cep} - {pharmLocation.cidade} -{" "}
+                    {pharmLocation.estado}
+                  </p>
+
+                  <p>
+                    <strong>Fale conosco: </strong>
+                    {pharmLocation.celular}
+                  </p>
+                  <SocialIcon
+                    url={`https://web.whatsapp.com/send?phone=55${pharmLocation.celular
+                      .replace(/(?!\w|\s)./g, "") //remove special characters
+                      .replace(/\s+/g, "")}`} //remove blank spaces
+                    target="_blank"
+                  />
+                </div>
+              </Popup>
+            </Marker>
+          ))}
+        </MapContainer>
+      </div>
     </div>
   );
 }
