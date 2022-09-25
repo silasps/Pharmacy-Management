@@ -13,18 +13,22 @@ export default function Map() {
       });
   }, []);
 
+
+
   return (
     <div
       style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
     >
+      
       <h2 style={{ textAlign: "center", marginTop: "15px" }}>
         Localização Farmácias CLAMED
       </h2>
 
+
       <div className="img-fluid">
         <MapContainer
-          center={[-26.301449, -48.8492354]}
-          zoom={10}
+          center={[-23.1026337, -45.5624926]}
+          zoom={7}
           scrollWheelZoom={true}
           style={{ height: "800px", width: "1000px" }}
         >

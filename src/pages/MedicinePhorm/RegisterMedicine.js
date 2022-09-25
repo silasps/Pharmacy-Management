@@ -15,7 +15,7 @@ export default function RegisterMedicine() {
   
   console.log(medicine);
 
-    
+  // Atualizar a lista de Medicamentos
   function updateMedicineList(e) {
     e.preventDefault()
 

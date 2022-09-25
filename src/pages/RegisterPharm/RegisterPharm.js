@@ -3,15 +3,15 @@ import PharmForm from "./PharmForm";
 
 export default function RegisterPharm() {
   const [pharm, setPharm] = useState({
-    razaoSocial: "CLAMED Joinville",
-    cnpj: "3798077000147",
-    nomeFantasia: "CLAMED Joinvill",
-    email: "regulatorio@clamed.com.br",
+    razaoSocial: "",
+    cnpj: "",
+    nomeFantasia: "",
+    email: "",
     telefone: "",
-    celular: "47 3461-9805",
-    cep: "89201-400",
+    celular: "",
+    cep: "",
     logradouro: "",
-    numero: "638",
+    numero: "",
     bairro: "",
     cidade: "",
     estado: "",
@@ -20,7 +20,7 @@ export default function RegisterPharm() {
     longitude: "",
   });
 
-  function getAddress (cep) {
+  function getAddress(cep) {
     fetch(`https://viacep.com.br/ws/${cep}/json/`)
       .then((response) => {
         return response.json();
@@ -38,43 +38,81 @@ export default function RegisterPharm() {
       });
   }
 
-  function getLatLong (rua,estado) {
-    fetch(`https://nominatim.openstreetmap.org/search?q=${rua}+${estado}&format=json`)
-    .then((response) => response.json())
-    .then(data => {
-      console.log(data);
-      const {lat, lon} = data[0]
-      setPharm(prev => ({
-        ...prev,
-        latitude: lat,
-        longitude: lon
-      }))
-    })
+  // API parou de funcionar
+  // function getLatLong (rua,estado) {
+  //   fetch(`https://nominatim.openstreetmap.org/search?q=${rua}+${estado}&format=json`)
+  //   .then((response) => response.json())
+  //   .then(data => {
+  //     const {lat, lon} = data[0]
+  //     setPharm(prev => ({
+  //       ...prev,
+  //       latitude: lat,
+  //       longitude: lon
+  //     }))
+  //   })
+  // }
+
+  const apiKey = "AIzaSyAJ5RwSgHfPUtcCfF3D1yO3bPOzEwgFmAM";
+
+  function getLatLong(numero, rua, cidade, estado) {
+    fetch(
+      `https://maps.googleapis.com/maps/api/geocode/json?address=${numero}+${rua},+${cidade},+${estado}&key=${apiKey}`
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        const { lat, lng } = data.results[0].geometry.location;
+        setPharm((prev) => ({
+          ...prev,
+          latitude: lat,
+          longitude: lng,
+        }));
+      });
   }
 
   useEffect(() => {
-    if (pharm.cep.length === 9) {
-      getAddress(pharm.cep)
-      getLatLong(pharm.logradouro, pharm.estado)
+    if (pharm.cep.length === 9 || pharm.cep.length === 8) {
+      getAddress(pharm.cep);
+      getLatLong(pharm.numero, pharm.logradouro, pharm.cidade, pharm.estado);
     }
   }, [pharm.cep]);
 
-  
-  function updatePharmList() {
+  function updatePharmList(e) {
+    e.preventDefault();
+
     fetch("http://localhost:3001/pharmacies", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(pharm),
     });
+    clearForm();
   }
 
-  // const []
+  // Limpar formulario
+  function clearForm() {
+    setPharm({
+      razaoSocial: "",
+      cnpj: "",
+      nomeFantasia: "",
+      email: "",
+      telefone: "",
+      celular: "",
+      cep: "",
+      logradouro: "",
+      numero: "",
+      bairro: "",
+      cidade: "",
+      estado: "",
+      complemento: "",
+      latitude: "",
+      longitude: "",
+    });
+  }
 
   return (
     <div
       className="form-container"
       style={{
-        minWidth: '40vh',
+        minWidth: "40vh",
         border: "solid #31955f 1px",
         borderRadius: "15px",
         margin: "40px 10px 40px 10px",
@@ -234,12 +272,16 @@ export default function RegisterPharm() {
 
         <div
           className="col-12"
-          style={{ display: "flex", justifyContent: "space-around", minWidth: "100px" }}
+          style={{
+            display: "flex",
+            justifyContent: "space-around",
+            minWidth: "100px",
+          }}
         >
           <button type="submit" className="btn btn-primary">
             Cadastrar
           </button>
-          <button type="reset" className="btn btn-primary">
+          <button type="reset" className="btn btn-primary" onClick={clearForm}>
             Limpar
           </button>
         </div>
@@ -247,9 +289,3 @@ export default function RegisterPharm() {
     </div>
   );
 }
-
-// https://viacep.com.br/ws/{cep}/json/
-// https://www.figma.com/file/gmt69WuunZhlaSOjlU1luk/Untitled?node-id=0%3A1
-// export const validEmail = new RegExp(
-//     '^[a-zA-Z0-9._:$!%-]+@[a-zA-Z0-9.-]+.[a-zA-Z]$'
-//  );

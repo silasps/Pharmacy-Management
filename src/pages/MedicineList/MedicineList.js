@@ -1,32 +1,14 @@
 import { useEffect, useState } from "react";
 import MedicineCard from "./MedicineCard";
 import "./MedicineList.css";
-import Modal from "../../components/Modal/Modal";
-// import { Container, Button } from "../../components/Modal/Styled";
-import styled from 'styled-components'
 import { GlobalStyle } from "../../globalStyle";
+import Modal from "../../components/Modal/Modal";
+import { Container, Button } from "../../components/Modal/Styled";
 
-const Container = styled.div `
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-`
-
-const Button = styled.button`
-    min-width: 100px;
-    padding: 16px 32px;
-    border-radius: 4px;
-    border: none;
-    background: #141414;
-    color: #fff;
-    font-size: 24px;
-    cursor: pointer;
-`
-
-export default function MedicineList({  }) {
+export default function MedicineList({}) {
   const [medicineList, setMedicineList] = useState([]);
   const [showModal, setShowModal] = useState(false);
+  const [cardId, setCardId] = useState();
 
   useEffect(() => {
     getMedicineList();
@@ -53,63 +35,70 @@ export default function MedicineList({  }) {
     }
   }
 
-  function openModal() {
-    setShowModal(prev => !prev);
-    console.log('imagem clicada');
+  function openModal(id) {
+    setShowModal((prev) => !prev);
+    setCardId(id)
+    console.log("imagem clicada");
   }
 
   return (
     <>
-    {/* <div className="main-container">
-      <h2 style={{ textAlign: "center", marginTop: "15px" }}>
-        Lista de Medicamentos
-      </h2>
-      <div
-        className="cards-box"
-        style={{
-          minHeight: "90vh",
-          border: "solid #31955f 1px",
-          borderRadius: "15px",
-          margin: "40px 10px 40px 10px",
-          padding: "15px",
-          msAlignSelf: "center",
-        }}
-      >
-        {medicineList.map((medicine) => {
-          return (
-            <div className="medicine-card">
-              <img
-                className="delete-btn"
-                src="https://cdn-icons-png.flaticon.com/512/5974/5974771.png"
-                onClick={(e) =>
-                  deleteMedicine(
-                    medicine.id,
-                    medicine.nomeMedicamento,
-                    medicine.doseMedicamento
-                  )
-                }
-              ></img>
-
-              <MedicineCard
-                key={medicine.id}
-                tipo={medicine.tipoMedicamento}
-                nomeMedicamento={medicine.nomeMedicamento}
-                precoUnitario={medicine.precoUnitario}
-                doseMedicamento={medicine.doseMedicamento}
-                funcao={showModal}
-                // id={medicine.id}
-              />
-            </div>
-          );
-        })}
+      <div className="main-container">
+        <h2 style={{ textAlign: "center", marginTop: "15px" }}>
+          Lista de Medicamentos
+        </h2>
+        <Container showModal={showModal}>
+          <Modal showModal={showModal} setShowModal={setShowModal} cardId={cardId}/>
+          <GlobalStyle />
+        </Container>
+        <div
+          className="cards-box"
+          style={{
+            minHeight: "90vh",
+            border: "solid #31955f 1px",
+            borderRadius: "15px",
+            margin: "40px 10px 40px 10px",
+            padding: "15px",
+            msAlignSelf: "center",
+          }}
+        >
+          {medicineList.map((medicine) => {
+            return (
+              <div className="medicine-card">
+                <img
+                  style={{ cursor: "pointer" }}
+                  className="delete-btn"
+                  src="https://cdn-icons-png.flaticon.com/512/5974/5974771.png"
+                  onClick={(e) =>
+                    deleteMedicine(
+                      medicine.id,
+                      medicine.nomeMedicamento,
+                      medicine.doseMedicamento
+                    )
+                  }
+                ></img>
+                <img
+                  className="img-thumbnail"
+                  src={medicine.imagem}
+                  onClick={(e) => {
+                    openModal(medicine.id)}
+                  }
+                ></img>
+                <MedicineCard
+                  key={medicine.id}
+                  tipo={medicine.tipoMedicamento}
+                  nomeMedicamento={medicine.nomeMedicamento}
+                  precoUnitario={medicine.precoUnitario}
+                  doseMedicamento={medicine.doseMedicamento}
+                  img={medicine.imagem}
+                  // openModalFunction={openModal}
+                  // id={medicine.id}
+                />
+              </div>
+            );
+          })}
+        </div>
       </div>
-    </div> */}
-
-      <Container>
-        <Button onClick={openModal}>I'm a modal</Button>
-        <Modal showModal={showModal} setShowModal={setShowModal} />
-        <GlobalStyle />
-      </Container>
     </>
   );
 }

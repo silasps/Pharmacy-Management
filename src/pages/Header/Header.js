@@ -1,6 +1,7 @@
+import "bootstrap/js/src/collapse.js";
 import { useNavigate } from "react-router-dom";
 import { useLogin } from "../../components/contexts/useLogin";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { NavItem } from "../Header/HdStyled";
 
 export default function MainHeader() {
@@ -15,6 +16,11 @@ export default function MainHeader() {
     navigate(pagina);
   }
 
+  useEffect(() => {
+    navigate("/");
+    setItem("map");
+  }, []);
+
   return (
     <div className="header" style={{ zIndex: 1 }}>
       <nav className="navbar sticky-top navbar-expand-lg navbar-light bg-light">
@@ -23,7 +29,11 @@ export default function MainHeader() {
             <img
               className="logo"
               src="	https://www.clamed.com.br/wp-content/uploads/2015/09/logoCLAMED_verde.png"
-              onClick={() => navigate("/")}
+              onClick={() => {
+                navigate("/");
+                setItem("map");
+              }}
+              active={item === "map"}
               style={{
                 cursor: "pointer",
                 width: "100px",
@@ -49,7 +59,7 @@ export default function MainHeader() {
                 className="collapse navbar-collapse"
                 id="navbarSupportedContent"
               >
-                <ul className="navbar-nav me-auto mb-2 mb-lg-0">                  
+                <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                   <li className="nav-item">
                     <NavItem
                       className="nav-link"

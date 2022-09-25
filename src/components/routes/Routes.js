@@ -13,9 +13,9 @@ export default function Rotas() {
     <Routes>
       <Route element={<PrivateRoute />}>
         <Route path="/home" element={<Home />} />
-        <Route path="/" element={<Navigate replace to="/home" />} />
 
         <Route path="/map" element={<Map />} />
+        <Route path="/" element={<Navigate replace to="/map" />} />
 
         <Route path="/register-medicine" element={<RegisterMedicine />} />
         <Route path="/medicine-list" element={<MedicineList />} />

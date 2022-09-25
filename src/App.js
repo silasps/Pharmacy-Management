@@ -11,7 +11,7 @@ export default function App() {
       <BrowserRouter>
         <MainHeader />
         <Rotas />
-        <Footer />
+        {/* <Footer /> */}
       </BrowserRouter>
     </LoginProvider>
   );

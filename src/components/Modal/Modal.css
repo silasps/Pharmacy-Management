@@ -13,5 +13,6 @@
 .body {
     display: flex;
     flex-direction: column;
-    
+    /* position: absolute; */
+    /* color: rgb(49, 149, 95); */
 }
