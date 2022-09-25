@@ -7,9 +7,9 @@ export default function MedicineForm({
   name,
   fill,
   required,
-  tipo,
+  tipo
 }) {
-  if (tipo == "input") {
+  if (tipo === "input") {
     return (
       <div className={classData}>
         <label htmlFor={label} className="form-label">
@@ -31,7 +31,7 @@ export default function MedicineForm({
         />
       </div>
     );
-  } else if (tipo == "textarea") {
+  } else if (tipo === "textarea") {
     return (
       <div className={classData}>
         <label htmlFor={label} className="form-label">
@@ -66,10 +66,11 @@ export default function MedicineForm({
           className="form-select"
           id="floatingSelect"
           required={required || false}
-          value={value} onChange={(e) => {
+          value={value}
+          onChange={(e) => {
             setInfo((prev) => ({
               ...prev,
-              [name]: e.target.value,
+              [name]: e.target.value
             }));
           }}
         >

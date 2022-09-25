@@ -10,10 +10,17 @@ export default function RegisterMedicine() {
     descMedicamento: "Aspirina - ácido acetilsalicílico 500mg² Aspirina é o medicamento da Bayer que tem ação analgésica, antitérmica e anti-inflamatória e é indicado há mais de 100 anos para o alívio da dor. Aspirina é indicada para dores de cabeça, de dente, de garganta, menstrual, muscular, nas articulações, nas costas, artrite e o alívio da dor e da febre nos resfriados ou gripes.",
     precoUnitario: "10,00",
     tipoMedicamento: "Medicamento comum",
+    imagem: "",
   });
   
+  console.log(medicine);
+
+    
   function updateMedicineList(e) {
     e.preventDefault()
+
+    updateImg(medicine.tipoMedicamento)
+    
     fetch("http://localhost:3001/medicines", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -22,6 +29,26 @@ export default function RegisterMedicine() {
     clearForm()
   }
 
+  // Atualizar o link da imagem
+  function updateImg(tipo){
+    if(tipo === "Medicamento Controlado" || tipo === ''){
+      setMedicine((prev) => ({
+        ...prev,
+        imagem: "https://2.bp.blogspot.com/-vz8zwJG7nXg/WbfO4Lgtz_I/AAAAAAAARus/xnypZV8CP9U79oAtKm58eZJ2FqEHGQB2QCLcBGAs/s1600/remedio%2Bcontrolado1.jpg"
+      }))
+    } else if (tipo === 'Medicamento Comum'){
+      setMedicine((prev) => ({
+        ...prev,
+        imagem: "https://wwyhfaiwse.map.azionedge.net/Custom/Content/Themes/Shared/Imagens/tvg_m.jpg"
+      }))
+    }
+  }
+
+  useEffect(()=>{
+    updateImg(medicine.tipoMedicamento)
+  }, [medicine.tipoMedicamento])
+
+  // Limpar formulario
   function clearForm(){
     setMedicine({
       nomeMedicamento: "",
@@ -87,6 +114,7 @@ export default function RegisterMedicine() {
           fill="*"
           value={medicine.tipoMedicamento}
           name="tipoMedicamento"
+          imagem='imagem'
           setInfo={setMedicine}
           tipo='select'
         />

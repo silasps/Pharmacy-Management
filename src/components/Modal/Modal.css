@@ -1,0 +1,17 @@
+.delete-btn {
+    height: 12px;
+    width: 12px;
+    padding: 0px;
+    margin: 2px;
+}
+
+.modalBackground {
+    /* position: fixed; */
+    z-index: 9999;
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    
+}
