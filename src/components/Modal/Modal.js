@@ -14,8 +14,8 @@ export default function Modal({ showModal, setShowModal, cardId, imagem }) {
 
   useEffect(() => {
     getMedicines();
-    
-  }, [medicines]);
+    filteredMed(cardId);
+  }, [cardId]);
 
   function getMedicines() {
     fetch(`http://localhost:3001/medicines`)
@@ -23,7 +23,6 @@ export default function Modal({ showModal, setShowModal, cardId, imagem }) {
       .then((data) => {
         setMedicines(data);
         console.log(data);
-        filteredMed(cardId);
       });
   }
 
