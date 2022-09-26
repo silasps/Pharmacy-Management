@@ -18,11 +18,11 @@ export default function MedicineList({}) {
     fetch(`http://localhost:3001/medicines`)
       .then((response) => response.json())
       .then((data) => {
-        // console.log(data);
         setMedicineList(data);
       });
   }
 
+  // Deletar card
   function deleteMedicine(id, nome, dose) {
     const confirm = window.confirm(
       `Tem certeza que deseja excluir o medicamento ${nome} - ${dose}?`
@@ -35,10 +35,11 @@ export default function MedicineList({}) {
     }
   }
 
+  //Abrir Modal
   function openModal(id) {
     setShowModal((prev) => !prev);
     setCardId(id)
-    console.log("imagem clicada");
+    console.log("imagem clicada", id);
   }
 
   return (
@@ -47,6 +48,11 @@ export default function MedicineList({}) {
         <h2 style={{ textAlign: "center", marginTop: "15px" }}>
           Lista de Medicamentos
         </h2>
+
+        <div className="divInfo">
+          <span className="info">Total: <strong>{medicineList.length}</strong> Medicamentos</span>
+      </div>
+
         <Container showModal={showModal}>
           <Modal showModal={showModal} setShowModal={setShowModal} cardId={cardId}/>
           <GlobalStyle />
@@ -69,7 +75,7 @@ export default function MedicineList({}) {
                   style={{ cursor: "pointer" }}
                   className="delete-btn"
                   src="https://cdn-icons-png.flaticon.com/512/5974/5974771.png"
-                  onClick={(e) =>
+                  onClick={() =>
                     deleteMedicine(
                       medicine.id,
                       medicine.nomeMedicamento,
@@ -80,7 +86,7 @@ export default function MedicineList({}) {
                 <img
                   className="img-thumbnail"
                   src={medicine.imagem}
-                  onClick={(e) => {
+                  onClick={() => {
                     openModal(medicine.id)}
                   }
                 ></img>

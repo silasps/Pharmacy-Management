@@ -71,6 +71,24 @@
       "latitude": -26.4597504,
       "longitude": -48.6103199,
       "id": 4
+    },
+    {
+      "razaoSocial": "CLAMED Belo Horizonte",
+      "cnpj": "3798077000149",
+      "nomeFantasia": "CLAMED Belo Horizonte",
+      "email": "ambulatorio@clamed.com.br",
+      "telefone": "",
+      "celular": "(31) 99655-1695",
+      "cep": "30130-000",
+      "logradouro": "Avenida Afonso Pena",
+      "numero": "1923",
+      "bairro": "Centro",
+      "cidade": "Belo Horizonte",
+      "estado": "MG",
+      "complemento": "até 653 - lado ímpar",
+      "latitude": -19.9288355,
+      "longitude": -43.93216229999999,
+      "id": 5
     }
   ],
   "medicines": [
@@ -95,16 +113,6 @@
       "id": "J3iAq38"
     },
     {
-      "nomeMedicamento": "Viagra",
-      "nomeLab": "Creator Laboratories",
-      "doseMedicamento": "100mg",
-      "descMedicamento": "Aspirina - ácido acetilsalicílico 500mg² Aspirina é o medicamento da Bayer que tem ação analgésica, antitérmica e anti-inflamatória e é indicado há mais de 100 anos para o alívio da dor. Aspirina é indicada para dores de cabeça, de dente, de garganta, menstrual, muscular, nas articulações, nas costas, artrite e o alívio da dor e da febre nos resfriados ou gripes.",
-      "precoUnitario": "100,00",
-      "tipoMedicamento": "Medicamento Controlado",
-      "imagem": "https://2.bp.blogspot.com/-vz8zwJG7nXg/WbfO4Lgtz_I/AAAAAAAARus/xnypZV8CP9U79oAtKm58eZJ2FqEHGQB2QCLcBGAs/s1600/remedio%2Bcontrolado1.jpg",
-      "id": "OJVjA-V"
-    },
-    {
       "nomeMedicamento": "Aspirina",
       "nomeLab": "Creator Laboratories",
       "doseMedicamento": "500mg",
@@ -123,16 +131,6 @@
       "tipoMedicamento": "Medicamento Comum",
       "imagem": "https://wwyhfaiwse.map.azionedge.net/Custom/Content/Themes/Shared/Imagens/tvg_m.jpg",
       "id": "sM4KEvv"
-    },
-    {
-      "nomeMedicamento": "Aspirina",
-      "nomeLab": "Creator Laboratories",
-      "doseMedicamento": "500mg",
-      "descMedicamento": "Aspirina - ácido acetilsalicílico 500mg² Aspirina é o medicamento da Bayer que tem ação analgésica, antitérmica e anti-inflamatória e é indicado há mais de 100 anos para o alívio da dor. Aspirina é indicada para dores de cabeça, de dente, de garganta, menstrual, muscular, nas articulações, nas costas, artrite e o alívio da dor e da febre nos resfriados ou gripes.",
-      "precoUnitario": "10,00",
-      "tipoMedicamento": "Medicamento Comum",
-      "imagem": "https://wwyhfaiwse.map.azionedge.net/Custom/Content/Themes/Shared/Imagens/tvg_m.jpg",
-      "id": "Tyj2sfO"
     },
     {
       "nomeMedicamento": "Aspirina",
@@ -183,16 +181,6 @@
       "tipoMedicamento": "Medicamento comum",
       "imagem": "https://wwyhfaiwse.map.azionedge.net/Custom/Content/Themes/Shared/Imagens/tvg_m.jpg",
       "id": "BmDgtzW"
-    },
-    {
-      "nomeMedicamento": "Aspirina",
-      "nomeLab": "Creator Laboratories",
-      "doseMedicamento": "500mg",
-      "descMedicamento": "Aspirina - ácido acetilsalicílico 500mg² Aspirina é o medicamento da Bayer que tem ação analgésica, antitérmica e anti-inflamatória e é indicado há mais de 100 anos para o alívio da dor. Aspirina é indicada para dores de cabeça, de dente, de garganta, menstrual, muscular, nas articulações, nas costas, artrite e o alívio da dor e da febre nos resfriados ou gripes.",
-      "precoUnitario": "10,00",
-      "tipoMedicamento": "Medicamento Controlado",
-      "imagem": "https://2.bp.blogspot.com/-vz8zwJG7nXg/WbfO4Lgtz_I/AAAAAAAARus/xnypZV8CP9U79oAtKm58eZJ2FqEHGQB2QCLcBGAs/s1600/remedio%2Bcontrolado1.jpg",
-      "id": "MQMLpvC"
     }
   ]
 }

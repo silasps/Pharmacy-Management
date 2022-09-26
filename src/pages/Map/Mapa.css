@@ -1,0 +1,11 @@
+.divInfo {
+    margin-bottom: 5px;
+    color: #ffffff;
+    font-size: 20px;
+    border: #31955f solid 1px;
+    border-radius: 12px;
+    width: 300px;
+    height: 33px;
+    text-align: center;
+    background-color: #31955f;
+}

@@ -14,14 +14,16 @@ export default function Modal({ showModal, setShowModal, cardId, imagem }) {
 
   useEffect(() => {
     getMedicines();
-    filteredMed(cardId);
-  }, [cardId]);
+    
+  }, [medicines]);
 
   function getMedicines() {
     fetch(`http://localhost:3001/medicines`)
       .then((response) => response.json())
       .then((data) => {
         setMedicines(data);
+        console.log(data);
+        filteredMed(cardId);
       });
   }
 

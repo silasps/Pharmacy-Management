@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import { SocialIcon } from "react-social-icons";
+import './Mapa.css'
 
 export default function Map() {
   const [pharmLocation, setPharmLocation] = useState([]);
@@ -13,17 +14,17 @@ export default function Map() {
       });
   }, []);
 
-
-
   return (
     <div
       style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
     >
-      
       <h2 style={{ textAlign: "center", marginTop: "15px" }}>
         Localização Farmácias CLAMED
       </h2>
 
+      <div className="divInfo">
+          <span className="info">Total: <strong>{pharmLocation.length}</strong> Farmácias</span>
+      </div>
 
       <div className="img-fluid">
         <MapContainer

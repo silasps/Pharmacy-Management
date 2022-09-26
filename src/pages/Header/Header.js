@@ -33,7 +33,6 @@ export default function MainHeader() {
                 navigate("/");
                 setItem("map");
               }}
-              active={item === "map"}
               style={{
                 cursor: "pointer",
                 width: "100px",
