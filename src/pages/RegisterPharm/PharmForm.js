@@ -14,6 +14,7 @@ export default function PharmForm({
         {label} <span style={{ color: 'red'}}>{fill}</span>
       </label>
       <input
+        // lembre de deixar o type reaproveitável
         type="text"
         className="form-control"
         id={id}

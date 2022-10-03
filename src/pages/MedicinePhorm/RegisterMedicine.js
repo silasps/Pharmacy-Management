@@ -13,8 +13,6 @@ export default function RegisterMedicine() {
     imagem: "",
   });
   
-  console.log(medicine);
-
   // Atualizar a lista de Medicamentos
   function updateMedicineList(e) {
     e.preventDefault()
@@ -138,8 +136,6 @@ export default function RegisterMedicine() {
           setInfo={setMedicine}
           tipo='textarea'
         />
-        
-
         <div
           className="col-12"
           style={{ display: "flex", justifyContent: "space-around" }}
@@ -147,7 +143,8 @@ export default function RegisterMedicine() {
           <button type="submit" className="btn btn-primary">
             Cadastrar
           </button>
-          <button className="btn btn-primary">
+          {/* para limpar o formulário é necessário colocar o onClick */}
+          <button className="btn btn-primary" onClick={() => clearForm()}>
             Limpar
           </button>
         </div>

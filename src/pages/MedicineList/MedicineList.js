@@ -12,7 +12,11 @@ export default function MedicineList({}) {
 
   useEffect(() => {
     getMedicineList();
-  }, [medicineList]);
+    // esse useEffect deveria ser chamado apenas quando o usuário entra na página, caso contrário bate infinitamente na API
+    // em produção isso poderia causar grandes prejuízos para empresa
+    // entendi que vc queria que a lista de medicamentos fosse atualizada quando um novo medicamento fosse deletado, mas não é a abordagem correta
+    // por isso removi a dependência do useEffect
+  }, []);
 
   function getMedicineList() {
     fetch(`http://localhost:3001/medicines`)
@@ -31,7 +35,9 @@ export default function MedicineList({}) {
     if (confirm) {
       fetch(`http://localhost:3001/medicines/${id}`, {
         method: "DELETE",
-      });
+      })
+      // essa é a abordagem correta para atualizar a lista de medicamentos quando um medicamento é deletado
+      .then(getMedicineList())
     }
   }
 
@@ -54,7 +60,8 @@ export default function MedicineList({}) {
       </div>
 
         <Container showModal={showModal}>
-          <Modal showModal={showModal} setShowModal={setShowModal} cardId={cardId}/>
+          {/* como você já tem acesso a lista de medicamentos deve enviá-la para o modal, assim não precisa bater na API novamente */}
+          <Modal showModal={showModal} setShowModal={setShowModal} cardId={cardId} medicineList={medicineList}/>
           <GlobalStyle />
         </Container>
         <div
