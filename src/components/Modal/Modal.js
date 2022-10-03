@@ -1,5 +1,4 @@
 import "./Modal.css";
-import { useState, useEffect } from "react";
 import {
   Background,
   CloseModalButton,
@@ -8,47 +7,58 @@ import {
   ModalWrapper,
 } from "./Styled";
 
-export default function Modal({ showModal, setShowModal, cardId, imagem }) {
-  const [medicines, setMedicines] = useState([]);
-  const [filtered, setFiltered] = useState();
+export default function Modal({ showModal, setShowModal, cardId, medicineList }) {
+  // como expliquei no outro comentário, a abordagem de bater na API novamente não é a melhor
+  // além disso não é preciso criar um estado para guardar o medicamento filtrado
 
-  useEffect(() => {
-    getMedicines();
-    filteredMed(cardId);
-  }, [cardId]);
+  // const [medicines, setMedicines] = useState([]);
+  // const [filtered, setFiltered] = useState();
 
-  function getMedicines() {
-    fetch(`http://localhost:3001/medicines`)
-      .then((response) => response.json())
-      .then((data) => {
-        setMedicines(data);
-        console.log(data);
-      });
-  }
+  // useEffect(() => {
+  //   getMedicines();
+  //   filteredMed(cardId);
+  // }, [cardId]);
 
-  function filteredMed(id) {
-    var filteredMedicines = medicines.filter((item) => {
-      return item.id === id;
-    });
-    setFiltered(filteredMedicines);
-    console.log("filtrado", filtered);
-  }
+  // function getMedicines() {
+  //   fetch(`http://localhost:3001/medicines`)
+  //     .then((response) => response.json())
+  //     .then((data) => {
+  //       setMedicines(data);
+  //       console.log(data);
+  //     });
+  // }
+
+  // function filteredMed() {
+  //   var filteredMedicines = medicineList.filter((item) => {
+  //     return item.id === cardId;
+  //   });
+  //   setFiltered(filteredMedicines);
+  //   console.log("filtrado", filtered);
+  // }
+
+  // a abordagem correta é filtrar a lista de medicamentos que já está no estado
+  const filteredMedicines = medicineList.filter((item) => {
+    return item.id === cardId;
+  })
+  // você pode colocar o [0] no final da linha acima, assim não precisa colocar no return
+  // ou criar uma nova variável para isso, mas não é uma boa prática
+  const filtered = filteredMedicines[0]
 
   return (
     <>
       {showModal ? (
         <Background>
           <ModalWrapper showModal={showModal}>
-            <ModalImg src={filtered[0].imagem} alt="medicine" />
+            <ModalImg src={filtered.imagem} alt="medicine" />
             <ModalContent>
-              <h1>{filtered[0].nomeMedicamento}</h1>
-              <p>{filtered[0].doseMedicamento}</p>
+              <h1>{filtered.nomeMedicamento}</h1>
+              <p>{filtered.doseMedicamento}</p>
               <p><strong>Descrição</strong></p>
-              <p>{filtered[0].descMedicamento}</p>
+              <p>{filtered.descMedicamento}</p>
               <p><strong>Tipo</strong></p>
-              <p>{filtered[0].tipoMedicamento}</p>
+              <p>{filtered.tipoMedicamento}</p>
               <p><strong>Preço</strong></p>
-              <p>{filtered[0].precoUnitario}</p>
+              <p>{filtered.precoUnitario}</p>
             </ModalContent>
             <CloseModalButton
               cursor="pointer"

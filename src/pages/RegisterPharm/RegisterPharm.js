@@ -60,6 +60,7 @@ export default function RegisterPharm() {
     )
       .then((response) => response.json())
       .then((data) => {
+        console.log(data)
         const { lat, lng } = data.results[0].geometry.location;
         setPharm((prev) => ({
           ...prev,
@@ -71,10 +72,18 @@ export default function RegisterPharm() {
 
   useEffect(() => {
     if (pharm.cep.length === 9 || pharm.cep.length === 8) {
-      getAddress(pharm.cep);
-      getLatLong(pharm.numero, pharm.logradouro, pharm.cidade, pharm.estado);
+      getAddress(pharm.cep)
+      // esse método não funciona dentro desse useEffect, pois ao digitar o cep, o campo logradouro ainda não foi preenchido
+      // getLatLong(pharm.numero, pharm.logradouro, pharm.cidade, pharm.estado);
     }
   }, [pharm.cep]);
+
+  // para a geolozação funcionar, o campo logradouro precisa estar preenchido, por isso o useEffect abaixo
+  useEffect(() => {
+    if (pharm.logradouro) {
+      getLatLong(pharm.numero, pharm.logradouro, pharm.cidade, pharm.estado);
+    }
+  }, [pharm.logradouro]);
 
   function updatePharmList(e) {
     e.preventDefault();
