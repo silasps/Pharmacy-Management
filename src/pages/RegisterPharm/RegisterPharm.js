@@ -52,7 +52,7 @@ export default function RegisterPharm() {
   //   })
   // }
 
-  const apiKey = "AIzaSyAJ5RwSgHfPUtcCfF3D1yO3bPOzEwgFmAM";
+  const apiKey = "";
 
   function getLatLong(numero, rua, cidade, estado) {
     fetch(
